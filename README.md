@@ -1,6 +1,6 @@
-# 🚀 CTO-Track Portfolio Summary
+# Career Track Portfolio Summary
 
-As a senior technology leader with 25+ years of experience, my portfolio showcases enterprise-scale innovations across Agile transformation, AI architecture, and information security compliance—highlighting a trajectory toward the **Chief Technology Officer (CTO)** role. Each case study reflects my ability to blend strategic vision with hands-on technical execution.
+As a senior technology leader with 25+ years of experience, my portfolio showcases enterprise-scale innovations across Agile transformation, AI architecture, and information security compliance—highlighting a trajectory toward the ** Technical Executive role. Each case study reflects my ability to blend strategic vision with hands-on technical execution.
 
 ---
 
@@ -50,4 +50,3 @@ graph TD
 
 ---
 
-> 🧩 _Each portfolio entry represents a fusion of strategy, execution, and governance—hallmarks of effective CTO leadership._
