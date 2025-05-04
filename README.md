@@ -6,15 +6,15 @@ As a senior technology leader with 25+ years of experience, my portfolio showcas
 
 ## Key Highlights
 
-- ** AI-Driven Innovation**  
+-  AI-Driven Innovation  
   Architected an enterprise-grade AI knowledge base using **Retrieval-Augmented Generation (RAG)** with OpenAI, LangChain, Flask, and Azure Cognitive Search.  
   ✅ Automated HR query handling, reducing operational workload by **over 60%**.
 
-- ** Enterprise Agile Transformation**  
+-  Enterprise Agile Transformation  
   Led multi-team Agile scaling initiatives at Capital One, embedding SAFe practices and engineering governance.  
   ✅ Improved delivery predictability and reduced cycle time across product teams.
 
-- ** ISO 27001 Certification Readiness**  
+-  ISO 27001 Certification Readiness  
   Directed a full ISO 27001 audit and certification program, aligning IT and business with enterprise risk frameworks.  
   ✅ Established repeatable compliance governance models.
 
