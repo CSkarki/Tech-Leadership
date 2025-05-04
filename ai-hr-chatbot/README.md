@@ -39,7 +39,6 @@ Employees frequently submitted repetitive HR-related queries, overwhelming suppo
 ---
 
 ## 📐 Architecture Diagram
-
 ```mermaid
 flowchart TD
 
@@ -59,13 +58,14 @@ GraphAPI -->|Profile & Group Info| FE
 %% Backend
 FE --> API[Flask Backend]
 API --> TokenValidation[Validate Token]
-API --> RoleCheck[Check Roles from Azure AD Groups]
+API --> RoleCheck[Check Azure AD Groups]
 
 %% File & Document Processing
 API --> BlobStorage[Azure Blob Storage]
-API --> LangChain[LangChain + OCR + PDF Parser]
-LangChain --> Chroma[ChromaDB (Embeddings)]
-LangChain --> MetaDB[SQLite (Metadata)]
+API --> LangChain[LangChain OCR + PDF Parsing]
+
+LangChain --> Chroma[ChromaDB for Embeddings]
+LangChain --> MetaDB[SQLite Metadata DB]
 
 %% AI Services
 API --> GPT[OpenAI GPT API]
@@ -78,7 +78,7 @@ API -->|Return Results| FE
 
 %% Access Control
 RoleCheck -->|SAS Token| BlobStorage
-RoleCheck -->|Restrict UI Features| Sidebar
+RoleCheck -->|Restrict UI| Sidebar
 ```
 ---
 
