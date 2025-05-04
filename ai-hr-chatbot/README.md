@@ -40,52 +40,56 @@ Employees frequently submitted repetitive HR-related queries, overwhelming suppo
 
 ## 📐 Architecture Diagram
 
+```mermaid
 graph TD
-    subgraph Frontend
-        F1[React UI (Material-UI)]
-        F2[Redux State Management]
-        F3[Azure AD Authentication (MSAL)]
-        F4[Role-Based Sidebar Navigation]
-        F5[Document Upload & Query Components]
-        F6[REST API Integration via Axios]
-    end
+  subgraph User Interaction
+    A[User (Employee/Admin)]
+    B[React Frontend (MSAL + Redux)]
+    A --> B
+  end
 
-    subgraph Backend
-        B1[Flask API Server]
-        B2[Authentication Layer]
-        B3[Document Processing Engine]
-        B4[AI Processing Engine]
-        B5[File Storage Handlers]
-        B6[SQLite Metadata DB]
-        B7[Vector Database (ChromaDB)]
-    end
+  subgraph Authentication
+    B --> C[Azure AD via MSAL]
+    C --> D[Microsoft Graph API]
+    D -->|Fetch User Profile & Group| B
+  end
 
-    subgraph Storage & External Services
-        S1[Azure Blob Storage]
-        S2[OpenAI API]
-        S3[Microsoft Graph API]
-    end
+  subgraph Role-Based UI
+    B --> E[Sidebar (Role-based Nav)]
+    B --> F[Session Token Storage]
+  end
 
-    F1 --> F2
-    F1 --> F3
-    F1 --> F4
-    F1 --> F5
-    F5 --> F6
-    F6 --> B1
-    F3 --> S3
+  subgraph Backend API (Flask)
+    G[Flask API Server]
+    B --> G
+    G --> H[Token Validation]
+    G --> I[Role Access (Azure AD Groups)]
+  end
 
-    B1 --> B2
-    B1 --> B3
-    B1 --> B4
-    B1 --> B5
+  subgraph File & Document Processing
+    G --> J[Azure Blob Storage]
+    G --> K[LangChain + OCR + PyPDF2]
+    K --> L[ChromaDB (Vector DB)]
+    K --> M[SQLite (Metadata)]
+  end
 
-    B3 --> S1
-    B3 --> B6
-    B3 --> B7
+  subgraph AI Services
+    N[OpenAI GPT API]
+    G -->|Query + Context| N
+    N -->|Answer / Summary / Flashcard| G
+  end
 
-    B4 --> S2
-    B5 --> S1
-    B2 --> S3
+  subgraph Data Flow
+    B -->|File Upload| J
+    B -->|Query Input| G
+    G -->|Result| B
+  end
+
+  subgraph Access Control
+    I -->|Restrict Features| B
+    I -->|SAS Token| J
+  end
+```
 ---
 
 ## 📎 Highlights
