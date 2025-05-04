@@ -44,44 +44,41 @@ Employees frequently submitted repetitive HR-related queries, overwhelming suppo
 flowchart TD
 
 %% User Interaction
-User --> Frontend
+User[Employee / Admin] --> FE[React App]
 
-subgraph UI [User Interface]
-  Frontend[React App (MSAL + Redux)]
-  Sidebar[Role-based Sidebar]
-  TokenStore[Session Token Storage]
-  Frontend --> Sidebar
-  Frontend --> TokenStore
+subgraph "User Interface (Frontend)"
+  FE --> MSALLogin[Azure AD Login via MSAL]
+  FE --> Sidebar[Sidebar - Role Based]
+  FE --> TokenStore[Session Token Storage]
 end
 
 %% Authentication
-Frontend --> MSAL[Azure AD Login (MSAL)]
-MSAL --> GraphAPI[Microsoft Graph API]
-GraphAPI -->|Profile & Group Info| Frontend
+MSALLogin --> GraphAPI[Microsoft Graph API]
+GraphAPI -->|Profile & Group Info| FE
 
 %% Backend
-Frontend --> FlaskAPI[Flask Backend API]
-FlaskAPI --> ValidateToken[Token Validation]
-FlaskAPI --> CheckRoles[Azure AD Group Check]
+FE --> API[Flask Backend]
+API --> TokenValidation[Validate Token]
+API --> RoleCheck[Check Roles from Azure AD Groups]
 
-%% File & Document Flow
-FlaskAPI --> Blob[Azure Blob Storage]
-FlaskAPI --> LangChain[LangChain + OCR + PyPDF2]
-LangChain --> ChromaDB[ChromaDB (Embeddings)]
-LangChain --> SQLite[SQLite (Metadata)]
+%% File & Document Processing
+API --> BlobStorage[Azure Blob Storage]
+API --> LangChain[LangChain + OCR + PDF Parser]
+LangChain --> Chroma[ChromaDB (Embeddings)]
+LangChain --> MetaDB[SQLite (Metadata)]
 
 %% AI Services
-FlaskAPI --> GPT[OpenAI GPT API]
-GPT -->|Answer / Summary / Flashcards| FlaskAPI
+API --> GPT[OpenAI GPT API]
+GPT -->|Response| API
 
-%% User Interaction with Files and Queries
-User -->|Upload / Query| Frontend
-Frontend -->|Search Request| FlaskAPI
-FlaskAPI -->|Result| Frontend
+%% Application Flow
+User -->|Upload / Query| FE
+FE -->|Send File / Query| API
+API -->|Return Results| FE
 
 %% Access Control
-CheckRoles -->|SAS Token| Blob
-CheckRoles -->|UI Restrictions| Sidebar
+RoleCheck -->|SAS Token| BlobStorage
+RoleCheck -->|Restrict UI Features| Sidebar
 ```
 ---
 
