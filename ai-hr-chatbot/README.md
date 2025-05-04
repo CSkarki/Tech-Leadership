@@ -41,54 +41,47 @@ Employees frequently submitted repetitive HR-related queries, overwhelming suppo
 ## 📐 Architecture Diagram
 
 ```mermaid
-graph TD
-  subgraph User Interaction
-    A[User (Employee/Admin)]
-    B[React Frontend (MSAL + Redux)]
-    A --> B
-  end
+flowchart TD
 
-  subgraph Authentication
-    B --> C[Azure AD via MSAL]
-    C --> D[Microsoft Graph API]
-    D -->|Fetch User Profile & Group| B
-  end
+%% User Interaction
+User --> Frontend
 
-  subgraph Role-Based UI
-    B --> E[Sidebar (Role-based Nav)]
-    B --> F[Session Token Storage]
-  end
+subgraph UI [User Interface]
+  Frontend[React App (MSAL + Redux)]
+  Sidebar[Role-based Sidebar]
+  TokenStore[Session Token Storage]
+  Frontend --> Sidebar
+  Frontend --> TokenStore
+end
 
-  subgraph Backend API (Flask)
-    G[Flask API Server]
-    B --> G
-    G --> H[Token Validation]
-    G --> I[Role Access (Azure AD Groups)]
-  end
+%% Authentication
+Frontend --> MSAL[Azure AD Login (MSAL)]
+MSAL --> GraphAPI[Microsoft Graph API]
+GraphAPI -->|Profile & Group Info| Frontend
 
-  subgraph File & Document Processing
-    G --> J[Azure Blob Storage]
-    G --> K[LangChain + OCR + PyPDF2]
-    K --> L[ChromaDB (Vector DB)]
-    K --> M[SQLite (Metadata)]
-  end
+%% Backend
+Frontend --> FlaskAPI[Flask Backend API]
+FlaskAPI --> ValidateToken[Token Validation]
+FlaskAPI --> CheckRoles[Azure AD Group Check]
 
-  subgraph AI Services
-    N[OpenAI GPT API]
-    G -->|Query + Context| N
-    N -->|Answer / Summary / Flashcard| G
-  end
+%% File & Document Flow
+FlaskAPI --> Blob[Azure Blob Storage]
+FlaskAPI --> LangChain[LangChain + OCR + PyPDF2]
+LangChain --> ChromaDB[ChromaDB (Embeddings)]
+LangChain --> SQLite[SQLite (Metadata)]
 
-  subgraph Data Flow
-    B -->|File Upload| J
-    B -->|Query Input| G
-    G -->|Result| B
-  end
+%% AI Services
+FlaskAPI --> GPT[OpenAI GPT API]
+GPT -->|Answer / Summary / Flashcards| FlaskAPI
 
-  subgraph Access Control
-    I -->|Restrict Features| B
-    I -->|SAS Token| J
-  end
+%% User Interaction with Files and Queries
+User -->|Upload / Query| Frontend
+Frontend -->|Search Request| FlaskAPI
+FlaskAPI -->|Result| Frontend
+
+%% Access Control
+CheckRoles -->|SAS Token| Blob
+CheckRoles -->|UI Restrictions| Sidebar
 ```
 ---
 
