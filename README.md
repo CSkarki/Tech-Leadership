@@ -42,7 +42,7 @@ graph TD
     Agile --> Exec2[Strategic Delivery]
     ISO --> Exec3[Risk & Compliance]
 
-    Exec1 --> CTO[CTO-Ready Leadership]
+    Exec1 --> CTO[Executive Technical Leadership]
     Exec2 --> CTO
     Exec3 --> CTO
 
