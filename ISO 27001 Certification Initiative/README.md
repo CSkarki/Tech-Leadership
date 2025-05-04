@@ -38,12 +38,21 @@ CIBT faced increasing pressure from global clients and partners to meet formal i
 
 ## 📐 Certification Program Overview
 
-![ISO27001 Program Flow](./iso27001-program.png)
+```mermaid
+flowchart TD
+  Gap[Gap Analysis] --> RiskAssess[Risk Assessment]
+  RiskAssess --> SoA[Statement of Applicability]
+  SoA --> Controls[Implement Security Controls]
+  Controls --> Policies[Develop Policies & Procedures]
+  Policies --> Awareness[Security Awareness Training]
+  Awareness --> Monitor[Monitoring & Internal Audit]
+  Monitor --> MgmtReview[Management Review]
+  MgmtReview --> ExtAudit[External Audit Readiness]
 
-_This visual outlines the ISO 27001 preparation lifecycle from gap analysis to external audit readiness._
+  classDef phase fill:#f9f,stroke:#333,stroke-width:1px;
 
-> Upload your certification flow or lifecycle diagram as `iso27001-program.png`.
-
+  class Gap,RiskAssess,SoA,Controls,Policies,Awareness,Monitor,MgmtReview,ExtAudit phase;
+```
 ---
 
 ## 👤 Role & Leadership
