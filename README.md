@@ -32,20 +32,38 @@ As a senior technology leader with 25+ years of experience, my portfolio showcas
 ## Career Track Portfolio Map
 
 ```mermaid
-
 graph TD
-    AI[AI Knowledge Base] --> R1[Reduced HR Workload]
-    Agile[Agile Transformation] --> R2[Improved Delivery Speed]
-    ISO[ISO 27001 Readiness] --> R3[Certified Compliance]
+    Start[CTO-Track Portfolio]
 
-    AI --> Exec1[Tech Execution]
-    Agile --> Exec2[Strategic Delivery]
-    ISO --> Exec3[Risk & Compliance]
+    subgraph Initiatives
+        AI[AI-Driven Knowledge Base<br><small>RAG, LangChain, GPT</small>]
+        AG[Agile Transformation<br><small>SAFe, Governance</small>]
+        ISO[ISO 27001 Readiness<br><small>Compliance & Audit</small>]
+    end
 
-    Exec1 --> CTO[Executive Technical Leadership]
-    Exec2 --> CTO
-    Exec3 --> CTO
+    subgraph Outcomes
+        O1[📉 60% HR Workload Reduction]
+        O2[⚡ Faster Delivery & Predictability]
+        O3[✅ ISO Certification Achieved]
+    end
 
+    subgraph Capabilities
+        C1[🔧 Technical Execution]
+        C2[📊 Strategic Delivery]
+        C3[🔐 Risk & Compliance Management]
+    end
+
+    AI --> O1 --> C1
+    AG --> O2 --> C2
+    ISO --> O3 --> C3
+
+    C1 --> CTO[🚀 CTO-Ready Leadership]
+    C2 --> CTO
+    C3 --> CTO
+
+    Start --> AI
+    Start --> AG
+    Start --> ISO
 ```
 
 ---
