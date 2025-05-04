@@ -1,0 +1,17 @@
+Case Study: Enterprise Agile Transformation at Scale
+
+Context:
+At Capital One, Card Tech, S4S program was facing delivery bottlenecks, low velocity, and siloed development across multiple teams.
+
+Role & Leadership:
+As Senior Technology Delivery Manager, I led the horizontal agile transformation across SAFe trains to improve predictability and transparency.
+
+Initiatives:
+	•	Introduced lean intake, refinement workflows, and backlog grooming practices
+	•	Designed a capacity planning model to estimate realistic delivery timelines
+	•	Conducted coaching sessions with Product Owners and Scrum Masters
+
+Outcome:
+	•	Achieved <45-day feature cycle time
+	•	Reduced sprint carryover by 40%
+	•	Streamlined program increment planning and improved stakeholder trust
