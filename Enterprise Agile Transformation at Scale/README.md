@@ -1,6 +1,6 @@
 # Enterprise Agile Transformation at Capital One
 
-## 🔍 Summary
+## Summary
 This project represents a successful multi-year Agile transformation initiative at Capital One within the Card Tech division. As a senior Agile delivery leader, I helped drive scaled execution across product teams by introducing Lean Agile best practices, engineering-led governance, and data-driven planning—laying the foundation for enterprise-wide agility.
 
 ---
@@ -39,12 +39,17 @@ Card Tech struggled with delivery predictability, inconsistent backlog grooming,
 
 ## 📐 Transformation Roadmap
 
-![Agile Transformation Roadmap](./transformation-roadmap.png)
+```mermaid
+flowchart TD
+  Init[Phase 1: Agile Readiness Assessment] --> Strategy[Phase 2: Transformation Strategy Definition]
+  Strategy --> Tooling[Phase 3: Tooling Integration (Jira, Confluence, ADO)]
+  Tooling --> Teams[Phase 4: Agile Team Onboarding & Coaching]
+  Teams --> Cadence[Phase 5: SAFe Events Orchestration]
+  Cadence --> InspectAdapt[Phase 6: Inspect & Adapt (PI Reviews, Retros)]
 
-_This roadmap outlines the Agile transformation phases, tooling integration, team onboarding, and SAFe events orchestration._
-
-> Upload your roadmap image or visual from PowerPoint, Lucidchart, or draw.io as `transformation-roadmap.png`.
-
+  classDef phase fill:#d1e8ff,stroke:#2c3e50,stroke-width:1px,font-weight:bold;
+  class Init,Strategy,Tooling,Teams,Cadence,InspectAdapt phase;
+```
 ---
 
 ## 👤 Role & Leadership
