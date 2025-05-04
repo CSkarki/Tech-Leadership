@@ -4,7 +4,7 @@ As a senior technology leader with 25+ years of experience, my portfolio showcas
 
 ---
 
-## 🔑 Key Highlights
+## Key Highlights
 
 - ** AI-Driven Innovation**  
   Architected an enterprise-grade AI knowledge base using **Retrieval-Augmented Generation (RAG)** with OpenAI, LangChain, Flask, and Azure Cognitive Search.  
@@ -32,20 +32,20 @@ As a senior technology leader with 25+ years of experience, my portfolio showcas
 ## Career Track Portfolio Map
 
 ```mermaid
+
 graph TD
-    AI[AI-Driven Knowledge Base<br>RAG, LangChain, GPT, Azure Search] --> Outcomes1[✔️ Reduced HR Workload by 60%]
-    Agile[Enterprise Agile Transformation<br>SAFe, Engineering Governance] --> Outcomes2[✔️ Increased Predictability & Speed]
-    ISO[ISO 27001 Readiness Program<br>Governance & Audit Automation] --> Outcomes3[✔️ Certified & Scalable Compliance]
+    AI[AI Knowledge Base] --> R1[Reduced HR Workload]
+    Agile[Agile Transformation] --> R2[Improved Delivery Speed]
+    ISO[ISO 27001 Readiness] --> R3[Certified Compliance]
 
-    subgraph Portfolio Pillars
-        AI --> Tech[Technical Execution]
-        Agile --> Strategy[Strategic Delivery]
-        ISO --> Risk[Risk & Compliance]
-    end
+    AI --> Exec1[Tech Execution]
+    Agile --> Exec2[Strategic Delivery]
+    ISO --> Exec3[Risk & Compliance]
 
-    Tech --> CTO[CTO-Ready Leadership]
-    Strategy --> CTO
-    Risk --> CTO
+    Exec1 --> CTO[CTO-Ready Leadership]
+    Exec2 --> CTO
+    Exec3 --> CTO
+
 ```
 
 ---
