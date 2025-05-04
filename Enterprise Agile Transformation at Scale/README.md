@@ -42,10 +42,10 @@ Card Tech struggled with delivery predictability, inconsistent backlog grooming,
 ```mermaid
 flowchart TD
   Init[Phase 1: Agile Readiness Assessment] --> Strategy[Phase 2: Transformation Strategy Definition]
-  Strategy --> Tooling[Phase 3: Tooling Integration (Jira, Confluence, ADO)]
-  Tooling --> Teams[Phase 4: Agile Team Onboarding & Coaching]
+  Strategy --> Tooling[Phase 3: Tooling Integration - Jira, Confluence, ADO]
+  Tooling --> Teams[Phase 4: Agile Team Onboarding and Coaching]
   Teams --> Cadence[Phase 5: SAFe Events Orchestration]
-  Cadence --> InspectAdapt[Phase 6: Inspect & Adapt (PI Reviews, Retros)]
+  Cadence --> InspectAdapt[Phase 6: Inspect and Adapt - PI Reviews and Retros]
 
   classDef phase fill:#d1e8ff,stroke:#2c3e50,stroke-width:1px,font-weight:bold;
   class Init,Strategy,Tooling,Teams,Cadence,InspectAdapt phase;
