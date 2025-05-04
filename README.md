@@ -1,4 +1,4 @@
-# Career Track Portfolio Summary
+# Portfolio Summary
 
 As a senior technology leader with 25+ years of experience, my portfolio showcases enterprise-scale innovations across Agile transformation, AI architecture, and information security compliance—highlighting a trajectory toward the Technical Executive role. Each case study reflects my ability to blend strategic vision with hands-on technical execution.
 
@@ -29,11 +29,11 @@ As a senior technology leader with 25+ years of experience, my portfolio showcas
 
 ---
 
-## Career Track Portfolio Map
+## Portfolio Map
 
 ```mermaid
 graph TD
-    Start[CTO-Track Portfolio]
+    Start[Portfolio]
 
     subgraph Initiatives
         AI[AI-Driven Knowledge Base<br><small>RAG, LangChain, GPT</small>]
@@ -57,7 +57,7 @@ graph TD
     AG --> O2 --> C2
     ISO --> O3 --> C3
 
-    C1 --> CTO[🚀 CTO-Ready Leadership]
+    C1 --> CTO[ Executive Technical Leadership]
     C2 --> CTO
     C3 --> CTO
 
