@@ -1,68 +1,58 @@
-# AI-Driven HR Knowledge Base using RAG Architecture
+# Enterprise Agile Transformation at Capital One
 
 ## 🔍 Summary
-This project demonstrates an enterprise-grade implementation of a **Retrieval-Augmented Generation (RAG)** powered chatbot designed to serve as a smart knowledge base for HR-related queries. It combines **Generative AI (OpenAI GPT)** with structured document retrieval using **LangChain** and **Azure Cognitive Search**. The solution significantly reduced HR workload and improved information accessibility for employees at scale.
+This project represents a successful multi-year Agile transformation initiative at Capital One within the Card Tech division. As a senior Agile delivery leader, I helped drive scaled execution across product teams by introducing Lean Agile best practices, engineering-led governance, and data-driven planning—laying the foundation for enterprise-wide agility.
 
 ---
 
 ## 🚨 Problem → 💡 Solution → 📈 Impact
 
 ### Problem
-Employees frequently submitted repetitive HR-related queries, overwhelming support staff and leading to delays, low satisfaction, and inefficient knowledge discovery across systems. There was no intelligent, centralized access point for policy documents, procedures, or HR support content.
+Card Tech struggled with delivery predictability, inconsistent backlog grooming, and feature delays across Agile teams working within SAFe trains. Stakeholder confidence and team alignment were diminishing due to unclear ownership and ad hoc prioritization.
 
 ### Solution
-- Led the design and development of an AI-based expert assistant using a **RAG (Retrieval-Augmented Generation)** approach.
-- Built a secure microservice-based architecture using **Flask** and **ReactJS** as the frontend.
-- Deployed on **Azure Cloud**, leveraging **Azure Cognitive Search** to index internal HR documents (PDFs, policy docs).
-- Integrated **LangChain** for intelligent document chunking, embedding, and similarity search before invoking GPT-based natural language generation.
+- Introduced **Lean Agile feature intake and refinement workflow**.
+- Created a **Capacity Planning Model** to enable right-sizing and accurate forecasting of delivery teams.
+- Mentored Product Owners, Scrum Masters, and RTEs in **Scaled Agile (SAFe) practices**.
+- Led ceremonies including **PI Planning, Scrum of Scrums, System Demo, PO Sync**, and implemented cross-team dependency management.
 
 ### Impact
-- 📉 Reduced HR ticket volume by 60% within the first 90 days.
-- ⚡ Average query response time under 3 seconds.
-- 🔐 Ensured enterprise-grade security through Azure AD SSO and access controls.
-- 📚 Created a reusable RAG-based framework for other internal use cases (Finance, IT, etc.).
+- 🕒 Reduced feature cycle time to under 45 days (from 75+).
+- 📊 Improved predictability in planning with visible KPIs (velocity, carryover, burn-down).
+- 🤝 Elevated stakeholder trust with clear reporting and outcome-focused dashboards.
+- 📈 Increased Agile maturity scores across teams.
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Practices & Tools
 
-| Component             | Technology                      |
-|-----------------------|----------------------------------|
-| Frontend              | ReactJS                         |
-| Backend API           | Flask (Python)                  |
-| AI Model              | OpenAI GPT                      |
-| Retrieval Pipeline    | LangChain + Azure Cognitive Search |
-| Embeddings            | OpenAI Embeddings               |
-| Authentication        | Azure AD SSO                    |
-| Hosting               | Microsoft Azure (App Service, Functions) |
-
----
-
-## 📐 Architecture Diagram
-
-![Architecture Diagram](./architecture.png)
-
-_The diagram shows the interaction between the React frontend, Flask backend, LangChain retrieval engine, Azure Cognitive Search index, and OpenAI model via secure API gateways._
-
-> **Note**: Upload `architecture.png` into this folder. You can design it using [draw.io](https://draw.io), PowerPoint, or Lucidchart.
+| Area                         | Tools / Frameworks              |
+|-----------------------------|----------------------------------|
+| Agile Scaling Framework     | SAFe (Scaled Agile Framework)   |
+| Backlog Management          | Jira, Jira Align, Confluence    |
+| Reporting                   | Velocity Charts, Burn-downs, MSRs |
+| Dependency Management       | Scrum of Scrums, RTE Syncs      |
+| Capacity Planning           | Custom-built Excel models       |
+| Team Coaching               | SAFe SPC, RTE-led facilitation  |
 
 ---
 
-## 📎 Highlights
+## 📐 Transformation Roadmap
 
-- Modular codebase with reusable RAG pipeline
-- Designed for enterprise-grade governance and privacy controls
-- Documentation-first approach for stakeholder clarity
-- Future-proofed for multi-domain knowledge base support
+![Agile Transformation Roadmap](./transformation-roadmap.png)
+
+_This roadmap outlines the Agile transformation phases, tooling integration, team onboarding, and SAFe events orchestration._
+
+> Upload your roadmap image or visual from PowerPoint, Lucidchart, or draw.io as `transformation-roadmap.png`.
 
 ---
 
 ## 👤 Role & Leadership
 
-Led the end-to-end technical architecture and implementation as **Director of Technology Programs**, collaborating with HR, InfoSec, and DevOps. Drove stakeholder alignment, architecture approval, and Agile execution with cross-functional teams.
+As **Senior Agile Delivery Leader**, I owned the Agile execution model across several ARTs (Agile Release Trains), led team coaching, and facilitated cross-functional planning and performance tracking.
 
 ---
 
 ## ✅ Status
 
-🟢 Completed and operational in production with plans for future expansion into other departments (Finance, Operations).
+🟢 Fully operational with reusable playbooks and dashboard templates now used across enterprise programs.
