@@ -40,12 +40,24 @@ Employees frequently submitted repetitive HR-related queries, overwhelming suppo
 
 ## 📐 Architecture Diagram
 
-![Architecture Diagram](./architecture.png)
++------------------+       +------------------+       +-------------------------+
+|   React Frontend | <---> |    Flask Backend | <---> |   LangChain RAG Engine  |
++------------------+       +------------------+       +-------------------------+
+                                                          |            |
+                                                          |            |
+                                                          v            v
+                                               +----------------+  +------------------+
+                                               | Azure Cognitive|  | OpenAI GPT Model |
+                                               |    Search       |  |  (via API)       |
+                                               +----------------+  +------------------+
+                                                        ^
+                                                        |
+                                               +------------------+
+                                               | HR Document Store |
+                                               | (PDFs, Policies)  |
+                                               +------------------+
 
-_The diagram shows the interaction between the React frontend, Flask backend, LangChain retrieval engine, Azure Cognitive Search index, and OpenAI model via secure API gateways._
-
-> **Note**: Upload `architecture.png` into this folder. You can design it using [draw.io](https://draw.io), PowerPoint, or Lucidchart.
-
+                         [Auth Layer: Azure AD SSO Enforced on Frontend & Backend]
 ---
 
 ## 📎 Highlights
